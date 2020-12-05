@@ -78,7 +78,7 @@ export default function Home(props) {
                   mb: "4",
                   border: "1px solid",
                   borderColor: "border",
-                  borderRadius: "3px",
+                  borderRadius: "3px"
                 }}
               >
                 <UserAvtar data={userData}></UserAvtar>
@@ -87,26 +87,28 @@ export default function Home(props) {
           ) : null}
 
           {notFound ? (
-            <Box sx={{ display: "flex", alignItems: "center", py: "4" }}>
+            <Box sx={{ display: "flex", alignItems: "center", py: "4", px: "2" }}>
               <GoOctoface></GoOctoface>
               <h1>Sorry :( no body found.</h1>
             </Box>
           ) : null}
 
-          <p sx={{ pb: "1", marginTop: "0" }}>
+          <p sx={{ pb: "1", marginTop: "0", px: "3" }}>
             Discover developers from Github who are in your city or country.
           </p>
+          <Box>
           <Box
             sx={{
               display: "flex",
               flexDirection: "row",
               alignItems: "center",
-              width: "400px",
+              width: ["350px", "300px", "400px"],
               border: "1px solid",
               borderColor: "border",
               borderRadius: "24px",
               backgroundColor: "transparent",
               px: "4",
+            
             }}
           >
             <GoSearch style={{ color: "#7a7a7a" }}></GoSearch>
@@ -133,6 +135,9 @@ export default function Home(props) {
               style={{ color: "#7a7a7a", cursor: "pointer" }}
             ></GoX>
           </Box>
+          </Box>
+          
+        
           <Box sx={{ paddingTop: "3" }}>
             <Button
               variant="primary"
